@@ -11,7 +11,7 @@ fun main() = runBlocking {
         delay(delay)
         println("This message should appear after $delay milliseconds")
     }
-    delay(1300L)
+    delay(1500L)
     println("Cancel job")
     //job.cancel() // cancels the job
     //job.join() // waits for job's completion
