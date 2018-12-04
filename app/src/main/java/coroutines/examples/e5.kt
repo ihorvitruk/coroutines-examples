@@ -3,6 +3,7 @@
 package coroutines.examples
 
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlin.system.measureTimeMillis
@@ -14,7 +15,7 @@ fun main() = runBlocking {
         val jobs: MutableList<Job> = arrayListOf()
         repeat(taskCount) {
             jobs.add(launch {
-                //delay(1000) - This DOES NOT have any influence on whole Task execution time or resources providing
+                delay(30000) //- This DOES NOT have any influence on whole Task execution time or resources providing
                 doSomeWork(it)
             })
         }

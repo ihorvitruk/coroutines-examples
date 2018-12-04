@@ -11,7 +11,7 @@ fun main() {
         val threads: MutableList<Thread> = arrayListOf()
         repeat(taskCount) {
             val thread = Thread(Runnable {
-                //Thread.sleep(1000) -- OutOfMemory for count ~> 10_000 if uncomment it !
+                //Thread.sleep(30000) //-- OutOfMemory for count ~> 10_000 if uncomment it !
                 doSomeWork(it)
             })
             threads.add(thread)
